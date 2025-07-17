@@ -6,25 +6,34 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "fbt": "pnpm fbtee:collect && pnpm fbtee:translate",
+    "fbtee:collect": "./node_modules/.bin/fbtee collect --src ./app/  --include-default-strings false",
+    "fbtee:translate": "fbtee translate --output-dir app/translations"
   },
   "dependencies": {
     "@react-router/node": "^7.7.0",
     "@react-router/serve": "^7.7.0",
+    "fbtee": "^1.3.0",
     "isbot": "^5.1.28",
+    "js-cookie": "^3.0.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.0"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.7.0",
+    "@babel/preset-typescript": "7.27.1",
+    "@nkzw/babel-preset-fbtee": "^1.3.0",
+    "@react-router/dev": "^7.6.3",
     "@tailwindcss/vite": "^4.1.11",
-    "@types/node": "^24.0.14",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^24.0.13",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
     "vite": "^7.0.5",
+    "vite-plugin-babel": "^1.3.2",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

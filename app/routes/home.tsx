@@ -1,10 +1,11 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
+import { fbs } from "fbtee";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: fbs("New React Router App", "meta title") },
+    { name: "description", content: fbs("Welcome to React Router!", "meta description") },
   ];
 }
 

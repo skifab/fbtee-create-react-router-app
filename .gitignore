@@ -4,3 +4,6 @@
 # React Router
 /.react-router/
 /build/
+.enum_manifest.json
+source_strings.json
+# app/translations <-- not ignored while testing

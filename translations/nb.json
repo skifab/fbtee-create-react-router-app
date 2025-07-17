@@ -1,0 +1,77 @@
+{
+  "fb-locale": "nb",
+  "translations": {
+    "xYS2dZ7szyzNdbVhBm0hLg==": {
+      "description": "React Router logo alt text",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "React Router logo",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "KRq/WYknEobylFGEfAw5bA==": {
+      "description": "subtitle",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Neste steg?",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "Wc2zM7HfyIxfkok1trApog==": {
+      "description": "docs text",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "React Router dokumentasjon",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "aIFBwngIbOdoQxp5NsWHlA==": {
+      "description": "discord text",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Diskuter React Router på Discord",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "3J8ZSwRGtGK1VkzXWPvtrQ==": {
+      "description": "meta title",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Ny React Router Applikasjon",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "Vlif+ut6RmmuYZ+bLjNUCA==": {
+      "description": "meta description",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Velkommen til React Router!",
+          "variations": {}
+        }
+      ],
+      "types": []
+    }
+  }
+}

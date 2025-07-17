@@ -5,10 +5,15 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  type unstable_MiddlewareFunction,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { useLocaleContext} from "./hooks";
+import { fbteeMiddleware, getLocaleContext } from "./fbtee/middleware";
+import { LanguageSelector } from "./LanguageSelector";
+import { fbs } from "fbtee";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,9 +28,22 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+// Server-side Locale Middleware
+export const unstable_middleware: unstable_MiddlewareFunction<Response>[] = [
+  fbteeMiddleware
+];
+
+export async function loader({
+  context,
+}: Route.LoaderArgs) {
+  const locale = getLocaleContext(context);
+  return { locale }
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const localeContext = useLocaleContext();
   return (
-    <html lang="en">
+    <html lang={localeContext.locale}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,19 +60,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div>
+      <LanguageSelector/>
+      <Outlet />
+    </div>
+    )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
+  let message : string = fbs("Oops!", "error message - boundary error");
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? fbs("404", "error message - 404") : fbs("Error", "error message - general");
     details =
       error.status === 404
-        ? "The requested page could not be found."
+        ? fbs("The requested page could not be found.", "error details - 404")
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
