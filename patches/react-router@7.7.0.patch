@@ -1,0 +1,13 @@
+diff --git a/dist/development/chunk-V6PEDDZI.js b/dist/development/chunk-V6PEDDZI.js
+index a18f8574e5f89bddf2a5dd9f0774fd7e0405c5df..9807f63f0760284b3f7523562cca57f2702cc668 100644
+--- a/dist/development/chunk-V6PEDDZI.js
++++ b/dist/development/chunk-V6PEDDZI.js
+@@ -369,7 +369,7 @@ var _map;
+ var unstable_RouterContextProvider = class {
+   constructor(init) {
+     __privateAdd(this, _map, /* @__PURE__ */ new Map());
+-    if (init) {
++    if (init && Symbol.iterator in Object(init)) {
+       for (let [context, value] of init) {
+         this.set(context, value);
+       }
