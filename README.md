@@ -1,3 +1,19 @@
+# Adding fbtee to create-react-router-app
+
+This is an experiment using fbtee with react router (framework mode).
+
+The fbtee-related changes are here: https://github.com/skifab/fbtee-create-react-router-app/commit/2b1c0bb109ee2f7d7368ccdd6e237c3c985c4435
+
+See it running here: https://fbtee-create-react-router-app.vercel.app/
+
+Some notes:
+
+* Uses (unstable) middleware on the server to initialize and change the selcted locale
+* Locale change on client-side only is not supported (can't see the reason to support this). The locale change happens through a redirect from middleware after detecting a `?lang=xx` query param.
+* Not using `createLocaleContext` from fbtee as I couln't get this to play nice with react router.
+* This implementation might not be best practice, just a newbie trying to get it working.
+
+
 # Welcome to React Router!
 
 A modern, production-ready template for building full-stack React applications using React Router.
