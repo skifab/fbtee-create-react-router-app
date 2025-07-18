@@ -72,6 +72,90 @@
         }
       ],
       "types": []
+    },
+    "OHISYojcf3Bn3M/scEid+Q==": {
+      "description": "error message - boundary error",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Uffda!",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "xqiXZDyWTkKh9qhrO3MsUQ==": {
+      "description": "error message - 404",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "404",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "MEON61IfhmQQfJWXtsT5+A==": {
+      "description": "error message - general",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Feil",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "7glFtnaCnOJVXd4yYgrQ/w==": {
+      "description": "error details - 404",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Den forespurte siden ble ikke funnet.",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "z3NmjrlHxziwq4MmK/VzLw==": {
+      "description": "about section critical data",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Kritisk data",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "vypPuIprynOT84jqvznB8g==": {
+      "description": "about section slow data",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Dette er treg data",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "F8PCTJn9UzPXXI/mRp//vg==": {
+      "description": "Loading skeleton",
+      "status": "new",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "Laster...",
+          "variations": {}
+        }
+      ],
+      "types": []
     }
   }
 }

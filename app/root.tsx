@@ -14,6 +14,7 @@ import { useLocaleContext} from "./hooks";
 import { fbteeMiddleware, getLocaleContext } from "./fbtee/middleware";
 import { LanguageSelector } from "./LanguageSelector";
 import { fbs } from "fbtee";
+import { MainMenu } from "./MainMenu";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -60,11 +61,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <div>
-      <LanguageSelector/>
-      <Outlet />
-    </div>
+  return (<>
+    <header className="flex justify-between p-4">
+      <MainMenu />
+      <LanguageSelector />
+    </header>
+    <Outlet />
+  </>
     )
 }
 
